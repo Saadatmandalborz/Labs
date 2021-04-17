@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Voting {
-    private static final int SINGLE_ANSWER_MODE = 0;
-    private static final int MULTI_ANSWER_MODE = 0;
+    public static final int SINGLE_ANSWER_MODE = 0;
+    public static final int MULTI_ANSWER_MODE = 1;
     private int type;
     private String question;
     private ArrayList<Person> voters;
@@ -35,7 +35,7 @@ public class Voting {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         String dateString = formatter.format(date);
-        if(type == SINGLE_ANSWER_MODE && polls.size() > 1)
+        if(type == SINGLE_ANSWER_MODE && votes.size() > 1)
         {
             System.out.println("Error, single mode!");
             return;
@@ -55,4 +55,10 @@ public class Voting {
     public HashMap<String, HashSet<Vote>> getPolls() {
         return polls;
     }
+
+    public int votersCount(){
+        return voters.size();
+    }
+
+
 }
