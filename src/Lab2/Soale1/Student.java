@@ -4,7 +4,7 @@ package Lab2.Soale1;
     administration system.
     * It holds the student details relevant in our context.
     *
-    * @author Ehsan
+    * @author Alborz saadatmand
     * @version 0.0
 */
 public class Student {
