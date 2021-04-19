@@ -38,6 +38,11 @@ public class VotingSystem {
 
     public void getResult(int num)
     {
+        if(num < 0 || num >= votingList.size())
+        {
+            System.out.println("Not found");
+            return;
+        }
         Voting voting = votingList.get(num);
         System.out.println(voting.getQuestion());
         System.out.println("Votes: (" + voting.votersCount()+" in total)");
