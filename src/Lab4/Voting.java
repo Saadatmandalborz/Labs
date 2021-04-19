@@ -1,5 +1,7 @@
 package Lab4;
 
+import ir.huri.jcal.JalaliCalendar;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,9 +34,8 @@ public class Voting {
 
     public void vote(Person person, ArrayList<String> votes)
     {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        String dateString = formatter.format(date);
+        JalaliCalendar date = new JalaliCalendar();
+        String dateString = date.toString();
         if(type == SINGLE_ANSWER_MODE && votes.size() > 1)
         {
             System.out.println("Error, single mode!");
